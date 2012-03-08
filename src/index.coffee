@@ -2,7 +2,8 @@ cleanCSS = require 'clean-css'
 sysPath = require 'path'
 
 module.exports = class CleanCSSMinifier
-  minifierType: 'stylesheet'
+  brunchPlugin: yes
+  type: 'stylesheet'
 
   constructor: (@config) ->
     null
