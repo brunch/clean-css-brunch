@@ -1,2 +1,2 @@
-## clean-css-brunch 0.1.0 (unreleased)
+## clean-css-brunch 1.0.0 (March 14, 2012)
 * Initial release
