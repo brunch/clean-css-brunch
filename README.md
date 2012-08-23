@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/brunch/clean-css-brunch.png)](http://travis-ci.org/brunch/clean-css-brunch)
 ## clean-css-brunch
 Adds [clean-css](https://github.com/GoalSmashers/clean-css) support to
 [brunch](http://brunch.io).
