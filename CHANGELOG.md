@@ -1,3 +1,6 @@
+# clean-css-brunch 1.4.0 (November 26, 2012)
+* Updated clean-css to 0.8.
+
 # clean-css-brunch 1.3.0 (June 29, 2012)
 * Updated clean-css to 0.4.2.
 * Added node.js 0.8 and 0.9 support.

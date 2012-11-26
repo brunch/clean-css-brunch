@@ -1,6 +1,6 @@
 {
   "name": "clean-css-brunch",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "Adds CleanCSS support to brunch.",
   "author": "Paul Miller (http://paulmillr.com/)",
   "homepage": "https://github.com/brunch/clean-css-brunch",
@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "coffee-script": "1.3.3",
-    "clean-css": "0.4.2"
+    "clean-css": "0.8.x"
   },
   "devDependencies": {
     "mocha": "1.2.2",
