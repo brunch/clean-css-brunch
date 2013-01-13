@@ -1,3 +1,6 @@
+# clean-css-brunch 1.5.0 (January 13, 2012)
+* Improved installation process.
+
 # clean-css-brunch 1.4.0 (November 26, 2012)
 * Updated clean-css to 0.8.
 
