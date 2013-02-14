@@ -6,11 +6,11 @@ module.exports = class CleanCSSMinifier
   type: 'stylesheet'
 
   constructor: (@config) ->
-    null
+    @options = @config?.plugins?.cleancss ? {}
 
-  minify: (data, path, callback) ->
+  minify: (data, path, callback) =>
     try
-      minified = cleanCSS.process data
+      minified = cleanCSS.process data, @options
     catch err
       error = "CSS minify failed on #{path}: #{error}"
     process.nextTick ->
