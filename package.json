@@ -15,7 +15,7 @@
     "test": "node setup.js test"
   },
   "dependencies": {
-    "clean-css": "0.9.x"
+    "clean-css": "0.10.x"
   },
   "devDependencies": {
     "mocha": "1.8.1",
