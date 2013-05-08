@@ -16,8 +16,8 @@ Or, do manual install:
 
 To specify clean-css options, use `config.plugins.cleancss` object, for example:
 
-```
-config:
+```coffeescript
+config =
   plugins:
     cleancss:
       keepSpecialComments: 0
