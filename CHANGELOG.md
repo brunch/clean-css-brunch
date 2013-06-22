@@ -1,3 +1,6 @@
+# clean-css-brunch 1.6.0 (22 June 2013)
+* Updated clean-css to 1.0.
+
 # clean-css-brunch 1.5.1 (19 March 2013)
 * Added node 0.10 support, removed coffee-script dependency.
 

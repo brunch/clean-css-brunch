@@ -1,6 +1,6 @@
 {
   "name": "clean-css-brunch",
-  "version": "1.5.1",
+  "version": "1.6.0",
   "description": "Adds CleanCSS support to brunch.",
   "author": "Paul Miller (http://paulmillr.com/)",
   "homepage": "https://github.com/brunch/clean-css-brunch",
