@@ -12,6 +12,6 @@ module.exports = class CleanCSSMinifier
     try
       optimized = cleanCSS.process data, @options
     catch err
-      error = "CSS minify failed on #{path}: #{error}"
+      error = "CSS minify failed on #{path}: #{err}"
     process.nextTick ->
       callback error, (optimized or data)
