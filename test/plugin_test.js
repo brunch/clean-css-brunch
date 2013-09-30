@@ -17,9 +17,9 @@ describe('Plugin', function() {
     var content = '#first { font-size: 14px; color: #b0b; }';
     var expected = '#first{font-size:14px;color:#b0b}';
 
-    plugin.optimize({data: content, path: ''}, function(error, result) {
+    plugin.optimize(content, '', function(error, data) {
       expect(error).not.to.be.ok;
-      expect(result.data).to.equal(expected);
+      expect(data).to.equal(expected);
       done();
     });
   });
