@@ -1,3 +1,7 @@
+# clean-css-brunch 1.7.0 (30 September 2013)
+* Updated clean-css to 1.1.x
+* Updated to brunch 1.7.x plugin API
+
 # clean-css-brunch 1.6.0 (22 June 2013)
 * Updated clean-css to 1.0.
 
