@@ -8,10 +8,10 @@ module.exports = class CleanCSSMinifier
   constructor: (@config) ->
     @options = @config?.plugins?.cleancss ? {}
 
-  optimize: (data, path, callback) =>
+  optimize: ({data, path}, callback) =>
     try
       optimized = cleanCSS.process data, @options
     catch err
       error = "CSS minify failed on #{path}: #{err}"
     process.nextTick ->
-      callback error, (optimized or data)
+      callback error, data: optimized or data
