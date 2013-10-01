@@ -8,7 +8,7 @@ module.exports = class CleanCSSMinifier
   constructor: (@config) ->
     @options = @config?.plugins?.cleancss ? {}
 
-  optimize: (data, path, callback) =>
+  optimize: (data, path, callback) ->
     try
       optimized = cleanCSS.process data, @options
     catch err
