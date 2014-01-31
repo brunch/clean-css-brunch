@@ -23,4 +23,23 @@ describe('Plugin', function() {
       done();
     });
   });
+  
+  it('should compile and produce a result clean-css options are reflected in', function(done) {
+    plugin.options = {
+      keepSpecialComments: 0,
+      keepBreaks: true
+    };
+    
+    var eol = require('os').EOL;
+    
+    var content = '/*! comment */\n#first { color: red; }\r\n#second { color: blue; }';
+    var expected = '#first{color:red}' + eol + '#second{color:#00f}';
+
+    plugin.optimize(content, '', function(error, data) {
+      expect(error).not.to.be.ok;
+      expect(data).to.equal(expected);
+      done();
+    });
+  });
+  
 });

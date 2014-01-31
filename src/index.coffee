@@ -1,4 +1,4 @@
-cleanCSS = require 'clean-css'
+CleanCSS = require 'clean-css'
 sysPath = require 'path'
 
 module.exports = class CleanCSSMinifier
@@ -10,7 +10,7 @@ module.exports = class CleanCSSMinifier
 
   optimize: (data, path, callback) ->
     try
-      optimized = cleanCSS.process data, @options
+      optimized = new CleanCSS(@options).minify data 
     catch err
       error = "CSS minify failed on #{path}: #{err}"
     process.nextTick ->
