@@ -1,3 +1,5 @@
+global.expect = require('chai').expect;
+global.Plugin = require('./');
 describe('Plugin', function() {
   var plugin;
 
@@ -23,15 +25,15 @@ describe('Plugin', function() {
       done();
     });
   });
-  
+
   it('should compile and produce a result clean-css options are reflected in', function(done) {
     plugin.options = {
       keepSpecialComments: 0,
       keepBreaks: true
     };
-    
+
     var eol = require('os').EOL;
-    
+
     var content = '/*! comment */\n#first { color: red; }\r\n#second { color: blue; }';
     var expected = '#first{color:red}' + eol + '#second{color:#00f}';
 
@@ -41,5 +43,5 @@ describe('Plugin', function() {
       done();
     });
   });
-  
+
 });
