@@ -14,7 +14,7 @@ CleanCSSMinifier.prototype.type = 'stylesheet';
 CleanCSSMinifier.prototype.optimize = function(data, path, callback) {
   var error, optimized;
   try {
-    optimized = new CleanCSS(this.options).minify(data);
+    optimized = new CleanCSS(this.options).minify(data).styles;
   } catch (_error) {
     error = "CSS minify failed on " + path + ": " + _error;
   } finally {
