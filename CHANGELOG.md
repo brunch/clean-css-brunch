@@ -1,3 +1,6 @@
+# clean-css-brunch 1.7.2 (9 March 2015)
+* Updated clean-css to latest (~3.1.5)
+
 # clean-css-brunch 1.7.1 (30 September 2013)
 * Reverted plugin API changes. Apparently the changes made for compilers have not been applied
   to optimizers, or otherwise something just went wrong.
