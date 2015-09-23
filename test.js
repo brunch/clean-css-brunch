@@ -44,4 +44,20 @@ describe('Plugin', function() {
     });
   });
 
+  it('should return a non minified css if path is in "ignore" list', function(done) {
+    plugin.options = {
+      ignored: /ignore-me\.css/
+    };
+
+    var content = '#first { font-size: 14px; color: #b0b; }';
+    var expected = content;
+
+    plugin.optimize(content, 'dist\/ignore-me.css', function(error, data) {
+      expect(error).not.to.be.ok;
+      expect(data).to.equal(expected);
+      done();
+    });
+  });
+
+
 });

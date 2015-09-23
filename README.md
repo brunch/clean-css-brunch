@@ -24,6 +24,15 @@ config =
       removeEmpty: true
 ```
 
+Joined files can be ignored and be passed-through, using 'ignored' option:
+
+```coffeescript
+config =
+  plugins:
+    cleancss:
+      ignored: /non_minimize\.css/
+```
+
 ## License
 
 The MIT License (MIT)

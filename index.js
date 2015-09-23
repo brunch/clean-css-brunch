@@ -5,7 +5,7 @@ function CleanCSSMinifier(config) {
   if (config == null) config = {};
   var plugins = config.plugins
   if (plugins == null) plugins = {};
-  this.options = plugins.cleancss;
+  this.options = plugins.cleancss || {};
 }
 
 CleanCSSMinifier.prototype.brunchPlugin = true;
@@ -13,6 +13,16 @@ CleanCSSMinifier.prototype.type = 'stylesheet';
 
 CleanCSSMinifier.prototype.optimize = function(data, path, callback) {
   var error, optimized;
+
+  try {
+    if (this.options.ignored && this.options.ignored.test(path)) {
+      // ignored file path: return non minified
+      return callback(null, data);
+    }
+  } catch (e) {
+    return callback('error checking ignored files to minify ' + e);
+  }
+
   try {
     optimized = new CleanCSS(this.options).minify(data).styles;
   } catch (_error) {
