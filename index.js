@@ -5,7 +5,7 @@ function CleanCSSMinifier(config) {
   if (config == null) config = {};
   var plugins = config.plugins
   if (plugins == null) plugins = {};
-  this.options = plugins.cleancss;
+  this.options = plugins.cleancss || {};
 }
 
 CleanCSSMinifier.prototype.brunchPlugin = true;
