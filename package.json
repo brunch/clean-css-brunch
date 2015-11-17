@@ -11,7 +11,7 @@
   },
   "main": "./lib/index",
   "scripts": {
-    "test": "node_modules/.bin/mocha"
+    "test": "mocha"
   },
   "dependencies": {
     "clean-css": "^3.4.8"
