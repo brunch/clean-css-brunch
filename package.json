@@ -4,6 +4,7 @@
   "description": "Adds CleanCSS support to brunch.",
   "author": "Paul Miller (http://paulmillr.com/)",
   "homepage": "https://github.com/brunch/clean-css-brunch",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git@github.com:brunch/clean-css-brunch.git"
