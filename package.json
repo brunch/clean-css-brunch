@@ -9,7 +9,6 @@
     "type": "git",
     "url": "git@github.com:brunch/clean-css-brunch.git"
   },
-  "main": "./lib/index",
   "scripts": {
     "test": "mocha"
   },
