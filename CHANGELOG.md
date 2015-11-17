@@ -1,3 +1,7 @@
+# clean-css-brunch 1.8.0 (17 November 2015)
+* Updated clean-css to latest (^3.4.8)
+* Added `ignored` option
+
 # clean-css-brunch 1.7.2 (9 March 2015)
 * Updated clean-css to latest (~3.1.5)
 
