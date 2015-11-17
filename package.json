@@ -13,10 +13,10 @@
     "test": "node_modules/.bin/mocha"
   },
   "dependencies": {
-    "clean-css": "~3.1.5"
+    "clean-css": "^3.4.8"
   },
   "devDependencies": {
-    "mocha": "~1.17.1",
-    "chai": "~1.9.0"
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4"
   }
 }
