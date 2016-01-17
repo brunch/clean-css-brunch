@@ -19,11 +19,10 @@ describe('Plugin', function() {
     var content = '#first { font-size: 14px; color: #b0b; }';
     var expected = '#first{font-size:14px;color:#b0b}';
 
-    plugin.optimize(content, '', function(error, data) {
-      expect(error).not.to.be.ok;
+    plugin.optimize({data: content, path: ''}).then(data => {
       expect(data).to.equal(expected);
       done();
-    });
+    }, error => expect(error).not.to.be.ok);
   });
 
   it('should compile and produce a result clean-css options are reflected in', function(done) {
@@ -37,11 +36,10 @@ describe('Plugin', function() {
     var content = '/*! comment */\n#first { color: red; }\r\n#second { color: blue; }';
     var expected = '#first{color:red}' + eol + '#second{color:#00f}';
 
-    plugin.optimize(content, '', function(error, data) {
-      expect(error).not.to.be.ok;
+    plugin.optimize({data: content, path: ''}).then(data => {
       expect(data).to.equal(expected);
       done();
-    });
+    }, error => expect(error).not.to.be.ok);
   });
 
   it('should return a non minified css if path is in "ignore" list', function(done) {
@@ -52,11 +50,10 @@ describe('Plugin', function() {
     var content = '#first { font-size: 14px; color: #b0b; }';
     var expected = content;
 
-    plugin.optimize(content, 'dist\/ignore-me.css', function(error, data) {
-      expect(error).not.to.be.ok;
+    plugin.optimize({data: content, path: "dist/ignore-me.css"}).then(data => {
       expect(data).to.equal(expected);
       done();
-    });
+    }, error => expect(error).not.to.be.ok);
   });
 
 
