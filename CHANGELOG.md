@@ -1,3 +1,6 @@
+# clean-css-brunch 2.0.0 (Jan 29, 2016)
+* Updated source code & API. The plugin would now only work with Brunch 2.2 and higher.
+
 # clean-css-brunch 1.8.0 (17 November 2015)
 * Updated clean-css to latest (^3.4.8)
 * Added `ignored` option
