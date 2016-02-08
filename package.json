@@ -13,7 +13,7 @@
     "test": "node_modules/.bin/eslint index.js && node_modules/.bin/mocha"
   },
   "dependencies": {
-    "clean-css": "^3.4.8"
+    "clean-css": "~3.4.8"
   },
   "devDependencies": {
     "chai": "^3.4.1",
