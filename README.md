@@ -5,7 +5,7 @@ Adds [clean-css](https://github.com/GoalSmashers/clean-css) support to
 The plugin will minify your CSS files.
 
 ## Usage
-Install the plugin via npm with `npm install --save clean-css-brunch`.
+Install the plugin via npm with `npm install --save-dev clean-css-brunch`.
 
 Or, do manual install:
 
