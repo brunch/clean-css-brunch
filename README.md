@@ -14,6 +14,10 @@ Or, do manual install:
 * If you want to use git version of plugin, add
 `"clean-css-brunch": "git+ssh://git@github.com:brunch/clean-css-brunch.git"`.
 
+## Options
+
+[See all possible options in the CleanCSS API](https://github.com/jakubpawlowicz/clean-css#how-to-use-clean-css-api).
+
 To specify clean-css options, use `config.plugins.cleancss` object, for example:
 
 ```coffeescript
