@@ -1,3 +1,4 @@
+/* eslint no-unsafe-finally: 1 */
 'use strict';
 
 const CleanCSS = require('clean-css');
