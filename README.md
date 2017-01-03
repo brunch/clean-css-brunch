@@ -1,16 +1,17 @@
-## clean-css-brunch
+# clean-css-brunch
+
 Adds [clean-css](https://github.com/GoalSmashers/clean-css) support to
 [brunch](http://brunch.io).
 
 The plugin will minify your CSS files.
 
 ## Usage
+
 Install the plugin via npm with `npm install --save-dev clean-css-brunch`.
 
 Or, do manual install:
 
-* Add `"clean-css-brunch": "x.y.z"` to `package.json` of your brunch app.
-  Pick a plugin version that corresponds to your minor (y) brunch version.
+* Add `"clean-css-brunch": "x.y.z"` to `package.json` of your brunch app. Pick a plugin version that corresponds to your minor (y) brunch version.
 * If you want to use git version of plugin, add
 `"clean-css-brunch": "git+ssh://git@github.com:brunch/clean-css-brunch.git"`.
 
@@ -20,28 +21,34 @@ Or, do manual install:
 
 To specify clean-css options, use `config.plugins.cleancss` object, for example:
 
-```coffeescript
-config =
-  plugins:
-    cleancss:
-      keepSpecialComments: 0
+```js
+module.exports = {
+  plugins: {
+    cleancss: {
+      keepSpecialComments: 0,
       removeEmpty: true
+    }
+  }
+};
 ```
 
 Joined files can be ignored and be passed-through, using 'ignored' option:
 
-```coffeescript
-config =
-  plugins:
-    cleancss:
+```js
+module.exports = {
+  plugins: {
+    cleancss: {
       ignored: /non_minimize\.css/
+    }
+  }
+};
 ```
 
 ## License
 
 The MIT License (MIT)
 
-Copyright (c) 2012-2014 Paul Miller (http://paulmillr.com)
+Copyright (c) 2012-2017 Paul Miller (http://paulmillr.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
