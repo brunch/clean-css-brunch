@@ -11,8 +11,6 @@ class CleanCSSMinifier {
     const data = params.data;
     const path = params.path;
 
-    let error, optimized;
-
     try {
       if (this.options.ignored && this.options.ignored.test(path)) {
         // ignored file path: return non minified
@@ -23,13 +21,9 @@ class CleanCSSMinifier {
     }
 
     try {
-      optimized = new CleanCSS(this.options).minify(data).styles;
-    } catch (_error) {
-      error = `CSS minify failed on ${path}: ${_error}`;
-    } finally {
-      if (error) return Promise.reject(error);
-
-      return Promise.resolve(optimized || data);
+      return Promise.resolve(new CleanCSS(this.options).minify(data).styles || data);
+    } catch (error) {
+      return Promise.reject(`CSS minify failed on ${path}: ${error}`);
     }
   }
 }
