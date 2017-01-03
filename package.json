@@ -20,5 +20,8 @@
     "eslint": "^3.12.2",
     "eslint-config-brunch": "brunch/eslint-config-brunch",
     "mocha": "^2.3.4"
+  },
+  "eslintConfig": {
+    "extends": "brunch"
   }
 }
