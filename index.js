@@ -7,9 +7,9 @@ class CleanCSSMinifier {
     this.options = config && config.plugins && config.plugins.cleancss || {};
   }
 
-  optimize(params) {
-    const data = params.data;
-    const path = params.path;
+  optimize(file) {
+    const data = file.data;
+    const path = file.path;
 
     try {
       if (this.options.ignored && this.options.ignored.test(path)) {
@@ -21,7 +21,8 @@ class CleanCSSMinifier {
     }
 
     try {
-      return Promise.resolve(new CleanCSS(this.options).minify(data).styles || data);
+      const min = new CleanCSS(this.options).minify(data);
+      return Promise.resolve(min.styles || data);
     } catch (error) {
       return Promise.reject(`CSS minify failed on ${path}: ${error}`);
     }

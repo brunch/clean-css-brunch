@@ -30,22 +30,22 @@ describe('Plugin', () => {
   });
 
   it('should compile and produce a result clean-css options are reflected in', done => {
-    plugin.options = {
-      keepSpecialComments: 0,
-      keepBreaks: true,
-    };
+    plugin.options = {level: 2, specialComments: false};
 
     const eol = require('os').EOL;
 
-    const content = '/*! comment */\n#first { color: red; }\r\n#second { color: blue; }';
-    const expected = `#first{color:red}${eol}#second{color:#00f}`;
+    const content = '#first { color: red; }\r\n#second { color: blue; }';
+    const expected = `#first{color:red}#second{color:#00f}`;
 
     plugin.optimize({data: content, path: ''})
       .then(data => {
         expect(data).to.equal(expected);
         done();
       })
-      .catch(error => expect(error).not.to.be.ok);
+      .catch(error => {
+        console.log(error);
+        expect(error).not.to.be.ok
+      });
   });
 
   it('should return a non minified css if path is in "ignore" list', done => {
