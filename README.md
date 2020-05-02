@@ -19,7 +19,7 @@ To specify clean-css options, use `config.plugins.cleancss` object, for example:
 module.exports = {
   plugins: {
     cleancss: {
-      keepSpecialComments: 0,
+      specialComments: 0,
       removeEmpty: true
     }
   }
